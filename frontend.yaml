@@ -19,7 +19,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: kontetsu/frontend-update:v1
+      - image: bora2612b/frontendbyjenkins:v02
         imagePullPolicy: Always
         name: frontend
         ports:
