@@ -12,7 +12,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t kontetsu/frontend:v02 .'
+				sh 'docker build -t bora2612b/frontendbyjenkins:v02 .'
 			}
 		}
 
@@ -26,13 +26,13 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push kontetsu/frontend:v02'
+				sh 'docker push bora2612b/frontendbyjenkins:v02'
 			}
 		}
 
 		stage ('Kubernetis deploy'){
 			steps {
-					sh ("/usr/local/bin/kubectl -n testenv apply -f frontend.yaml")
+					sh ("/usr/local/bin/kubectl  apply -f frontend.yaml")
 				
 			}
 		}
